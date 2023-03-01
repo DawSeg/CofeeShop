@@ -1,44 +1,35 @@
-/* eslint-disable no-unused-vars */
 export const select = {
   templateOf: {
-    product:'#template-product',
+    products: '#template-products',
   },
-};
-
-export const  containerOf = {
-  pages: '#pages',
-  home: '#home-page',
-  aboutUs: '#aboutUs',
-  contact: '#contact',
-  input: {
-    name: '#name',
-    title: '#title',
-    message: '#message',
-    submit: '#submit',
-  }
+  containerOf: {
+    productsWrapper: '.products-wrapper',
+    pages: '#pages',
+  },
+  nav: {
+    links: '.main-nav a',
+  },
 };
 
 export const classNames = {
-  active: 'active',
+  products: {
+    wrapperActive: 'active',
+  },
+  nav: {
+    active: 'active',
+  },
+  pages: {
+    active: 'active',
+  }
 };
 
-/*export const setings = {
+export const settings = {
   db: {
-    url: '//localhost:3131',
+    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
     products: 'products',
-    orders: 'orders',
-        
-    product: 'product',
-    order: 'order',
-    booking: 'booking',
-    event: 'event',
-    dateStartParamKey: 'date_gte',
-    dateEndParamKey: 'date_lte',
-    notRepeatParam: 'repeat=false',
-    repeatParam: 'repeat_ne=false',
   },
-};*/
+};
 
 export const templates = {
-  product: Handlebars.compile(document.querySelector(select.templateOf.product).innerHTML),
+  products: Handlebars.compile(document.querySelector(select.templateOf.products).innerHTML),
 };
