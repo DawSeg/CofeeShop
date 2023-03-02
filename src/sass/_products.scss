@@ -10,7 +10,12 @@
 
 .products {
   margin-bottom: 50px;
+}
 
+.products:nth-child(even){
+  .row{
+    flex-direction: row-reverse;
+  }
 }
 
 .product-content {
